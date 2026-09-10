@@ -2,7 +2,7 @@ package com.aigpu.resourceoptimizer.algorithm;
 
 import java.util.List;
 
-public class DPTest {
+public class GreedyTest {
 
     public static void main(String[] args) {
 
@@ -12,21 +12,25 @@ public class DPTest {
 
         int capacity = 10;
 
-        int result = DynamicProgramming.findMaximumBenefit(
+        int result = Greedy.findMaximumBenefit(
                 gpu,
                 benefit,
                 capacity
         );
 
         List<Integer> selectedJobs =
-                DynamicProgramming.findSelectedJobs(
+                Greedy.findSelectedJobs(
                         gpu,
                         benefit,
                         capacity
                 );
 
-        System.out.println("Maximum Benefit = " + result);
+        System.out.println(
+                "Maximum Benefit = " + result
+        );
 
-        System.out.println("Selected Jobs = " + selectedJobs);
+        System.out.println(
+                "Selected Jobs = " + selectedJobs
+        );
     }
 }
